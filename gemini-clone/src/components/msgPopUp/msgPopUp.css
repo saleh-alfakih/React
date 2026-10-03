@@ -1,0 +1,101 @@
+.close-msg-pop-up {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+}
+.msg-pop-up {
+  display: none;
+  min-height: 242px;
+  width: 387px;
+  padding: 18px 23px;
+
+  /* grid */
+  grid-template-rows: auto 1fr auto;
+  justify-items: end;
+  gap: 10px;
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translatey(-50%);
+
+  background-color: var(--bg-secundary);
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  transition: 150ms;
+  z-index: 10;
+}
+.msg-pop-up .close {
+  border-radius: 10px;
+  padding: 2px;
+  height: max-content;
+  width: min-content;
+  cursor: pointer;
+}
+.msg-pop-up .close:hover {
+  background-color: var(--danger);
+}
+.msg-pop-up .text {
+  font-size: 1.15rem;
+  padding-right: 25px;
+  padding-right: 25px;
+  margin-top: 10px;
+}
+.msg-pop-up .button-container {
+  display: flex;
+  gap: 10px;
+}
+.msg-pop-up button {
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 7px;
+  padding: 6px;
+}
+.msg-pop-up button:hover {
+  background-color: var(--bg-hover);
+}
+.danger .button-container .action {
+  color: var(--danger);
+}
+.warning .button-container .action {
+  color: var(--warning);
+}
+
+/* for msgPopUpInput */
+.gridAdjust {
+  grid-template-rows: auto auto 1fr auto !important;
+}
+.inputBar {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+
+  resize: none;
+  background: var(--bg-selected);
+  border-radius: 10px;
+}
+@media (max-width: 1024px) {
+  .msg-pop-up {
+    min-height: 206px;
+    width: 347px;
+  }
+}
+@media (max-width: 768px) {
+  .msg-pop-up {
+    min-height: 191px;
+    width: 295px;
+  }
+}
+@media (max-width: 425px) {
+  .msg-pop-up {
+    min-height: 166px;
+    width: 275px;
+    padding: 16px 18px;
+  }
+  .msg-pop-up .text {
+    margin-top: 7px;
+    font-size: 1.05rem;
+  }
+}

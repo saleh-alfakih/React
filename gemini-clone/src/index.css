@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  /* scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  transition: scrollbar-color 0.2s;
+  :hover {
+    scrollbar-color: var(--bg-hover) transparent;
+  }
+  ::placeholder {
+    user-select: none;
+  }
+  -webkit-tap-highlight-color: transparent;
+}
+:root {
+  font-family: "Lato", sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  --shadow: 1px 1px 10px var(--bg-selected);
+
+  /* dark mode */
+  --bg-primary: hsl(0, 0%, 6%);
+  --bg-secundary: hsl(0, 0%, 12%);
+  --bg-selected: hsl(0, 0%, 9%);
+  --bg-hover: hsl(0, 0%, 18%);
+  --text-primary: hsl(0, 0%, 89%);
+  --text-secundary: hsl(0, 0%, 89%, 0.55);
+  --bgColor-default: unset !important;
+
+  /* actions */
+  --danger: hsl(0, 70%, 36%);
+  --warning: hsl(56, 70%, 36%);
+  --success: hsl(113, 70%, 36%);
+  --info: hsl(194, 70%, 36%);
+}
+:root.light {
+  --bg-primary: hsl(0, 5%, 96%);
+  --bg-secundary: hsl(0, 0%, 100%);
+  --bg-selected: hsl(0, 7%, 95%);
+  --bg-hover: hsl(180, 3%, 94%);
+  --text-primary: hsl(0, 0%, 12%);
+  --text-secundary: hsla(0, 0%, 0%, 0.55);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+
+  transition:
+    color,
+    background-color 400ms !important;
+}
+/* fonts */
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/* resets */
+button {
+  color: inherit;
+  background-color: inherit;
+  border: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+svg {
+  display: block;
+}
+textarea {
+  font-family: "Lato", sans-serif;
+  color: var(--text-primary);
+}
+/* public classes */
+.active {
+  display: block !important;
+}
+.activeGrid {
+  display: grid !important;
+}
+.visible {
+  visibility: visible !important;
+}
+
+/* Tighten general paragraph and heading margins */
+.markdown-body {
+  color: var(--text-primary) !important;
+  white-space: normal !important;
+  background-color: transparent !important;
+}
+.markdown-body hr {
+  background-color: var(--bg-secundary) !important;
+}
+.markdown-body tr {
+  background-color: transparent !important;
+}

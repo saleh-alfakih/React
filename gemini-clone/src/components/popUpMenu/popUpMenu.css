@@ -1,0 +1,67 @@
+.pop-up-menu-trigger {
+  height: fit-content;
+  width: fit-content;
+  border-radius: 50%;
+}
+
+.pop-up-menu-trigger.text {
+  border-radius: 20px !important;
+  padding: 0 6px;
+}
+.pop-up-menu-trigger svg {
+  display: block;
+}
+.pop-up-menu-trigger:hover {
+  background-color: var(--bg-hover);
+  outline: 4px solid var(--bg-hover);
+}
+.pop-up-menu {
+  display: none;
+  position: fixed;
+
+  background-color: var(--bg-secundary);
+  font-size: 1.1rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  cursor: default;
+  z-index: 10;
+}
+.pop-up-menu.larg {
+  width: 215px;
+  gap: 4px;
+  padding: 6px;
+}
+.pop-up-menu.small {
+  width: 182px;
+  gap: 4px;
+  padding: 6px;
+}
+.pop-up-menu .spacer {
+  border-color: var(--bg-secundary);
+}
+.pop-up-menu .btn-op {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border-radius: 10px;
+
+  transition: 70ms;
+}
+.pop-up-menu .btn-op.larg {
+  height: 38px;
+}
+.pop-up-menu .btn-op.small {
+  height: 34px;
+}
+.pop-up-menu .btn-op:hover {
+  background-color: var(--bg-hover);
+}
+.pop-up-menu .btn-op .icon {
+  height: 90%;
+}
+.pop-up-menu .btn-op .icon svg {
+  height: 100%;
+}
+.pop-up-menu .btn-op .text {
+}
